@@ -5,6 +5,8 @@
 
 
 <h4>Ссылки</h4>
-<a href="http://api.mail.ru/docs/" target="_blank">Документация API Mail.ru</a>
-<a href="http://api.mail.ru/docs/reference/js/" target="_blank">Справочник по JavaSript API Mail.ru</a>
-<a href="http://api.mail.ru/docs/guides/flashapi/" target="_blank">Как использовать JavaSript API из Flash</a>
+<ul>
+<li><a href="http://api.mail.ru/docs/" target="_blank">Документация API Mail.ru</a></li>
+<li><a href="http://api.mail.ru/docs/reference/js/" target="_blank">Справочник по JavaSript API Mail.ru</a></li>
+<li><a href="http://api.mail.ru/docs/guides/flashapi/" target="_blank">Как использовать JavaSript API из Flash</a></li>
+</ul>
