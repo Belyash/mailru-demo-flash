@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Test Flash API</title>
+    <script type="text/javascript" src="http://connect.mail.ru/js/loader.js"></script>
+    
+    <style>
+    @-moz-keyframes visible {
+	  from {
+	    background: #0C0;
+	  }
+	  to {
+	    background: transparent;
+	  }
+    }
+    @-webkit-keyframes visible {
+	  from {
+	    background: #0C0;
+	  }
+	 
+	  to {
+	    background: transparent;
+	  }
+    }
+    body {
+    	background: darkblue;
+    	margin: 0;
+    	padding: 20px;
+    }
+    h1 {
+        border-bottom: 1px solid #cccccc;
+        color: white;
+        font: normal 20px/24px Georgia,	"Century Schoolbook L", Serif;
+        margin: 0 0 18px;
+    }
+    p {
+        color: #ffffff;
+        font: normal 12px/18px Arial, sans-serif, sans;
+    }
+    .wrap {
+    	background: #000000;
+    	border-top: 1px solid #cccccc;
+    	color: #00cc00;
+    	font: normal 12px/16px monospace, Arial, sans-serif;
+    	height: 150px;
+    	padding: 16px 20px;
+    	position: fixed;
+    	left: 0px;
+    	bottom: 0px;
+    	z-index: 1000;
+    	width: 720px;
+    }
+    .content {
+    	height: 100%;
+    	overflow: auto;
+    }
+    #debug {
+    	white-space: pre;
+    }
+    #debug b {
+    	color: #e8e8e8;
+    	font-weight: normal;
+    }
+    #cursor {
+    	display: block;
+    	height: 16px;
+    	width: 100%;
+    }
+    #cursor i {
+    	background: #00cc00; 
+    	display: inline-block;
+    	height: 12px;
+    	vertical-align: middle;
+    	width: 4px;
+    	-moz-animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	-moz-animation-name: visible;
+	-webkit-animation-name: visible;
+	animation-name: visible;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;e;
+	animation-iteration-count: infinite;e;
+	-moz-animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+    }
+    ol {
+    	color: white;
+    }
+    #test-js {
+    	margin: 50px 0 0;
+    	width: 500px;
+    }
+    </style>
+</head>
+<body>
+<h1>Test JavaScript API via Flash Lib</h1>
+<div id="content"></div>
+<div class="wrap">
+	<div class="content">
+		<div id="debug"></div>
+		<div id="cursor">$ <i></i></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    var debug = document.getElementById('debug'),
+    	cursor = document.getElementById('cursor'),
+    	content = document.getElementById('content'),
+	object = document.createElement('object');;
+    
+	object.type ="application/x-shockwave-flash";
+	object.id = "main";
+	object.name = "main";
+	object.width = "720";
+	object.height = "340";
+	object.data = "api_demo.swf?" + Math.random();
+	object.style.width = "720px";
+	object.style.height = "340px";
+	
+	content.appendChild(object)
+    	
+    function flashLog(args) {
+    	console.log(args);
+    	debug.innerHTML += '<b>DEBUG $ </b> ' + args + '\n';
+    	cursor.scrollIntoView();
+    }
+</script>
+</body>
+</html>
