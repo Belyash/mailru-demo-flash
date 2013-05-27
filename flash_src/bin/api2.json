@@ -3,20 +3,20 @@
         "like": {
             "url": "http://api.mail.ru/docs/reference/js/events-like/",
             "example": "mailru.events.listen(mailru.app.events.like, function(event) {\n   alert(event); // может быть liked, unliked \n});",
-			"method": "mailru.app.events.like",
-			"params": [],
-			"callback": "eventsLikeCallback",
+            "method": "mailru.app.events.like",
+            "params": [],
+            "callback": "eventsLikeCallback",
             "description": "Подпись на событие нажатия кнопки Нравится."
         }
     },
 	"session": {
-		"vid": {
-			"url": "no url",
-			"method": "mailru.session.vid",
-			"params": "",
-			"callback": "mailruSessionVidCallback",
-			"description": "Получение ID текущего пользователя."
-		}
+            "vid": {
+                "url": "no url",
+                "method": "mailru.session.vid",
+                "params": "",
+                "callback": "mailruSessionVidCallback",
+                "description": "Получение ID текущего пользователя."
+            }
 	},
     "friends": {
         "invite": {
@@ -25,8 +25,8 @@
             "parsedExample": [
                 "mailru.app.friends.invite()"
             ],
-			"method": "mailru.app.friends.invite",
-			"event": "app.friendsInvitation",
+            "method": "mailru.app.friends.invite",
+            "event": "app.friendsInvitation",
             "description": "Показывает пользователю диалог приглашения друзей в приложение."
         },
         "add": {
@@ -35,8 +35,8 @@
             "parsedExample": [
                 "mailru.common.friends.add('15410773191172635989')"
             ],
-			"method": "mailru.common.friends.add",
-			"event": "common.friends.add",
+            "method": "mailru.common.friends.add",
+            "event": "common.friends.add",
             "description": "Показывает пользователю диалог добавления в друзья."
         },
         "getAppUsers": {
@@ -45,7 +45,7 @@
             "parsedExample": [
                 "mailru.common.friends.getAppUsers(function(list) {\n  updateStatus(list[0]); // uid первого друга пользователя\n});"
             ],
-			"method": "mailru.common.friends.getAppUsers",
+            "method": "mailru.common.friends.getAppUsers",
             "description": "Возвращает информацию о друзьях пользователя, установивших ваше приложение."
         },
         "getExtended": {
@@ -54,7 +54,7 @@
             "parsedExample": [
                 "mailru.common.friends.getExtended(function(list) {\n  updateStatus(list[0].first_name); // имя первого друга пользователя\n});"
             ],
-			"method": "mailru.common.friends.getExtended",
+            "method": "mailru.common.friends.getExtended",
             "description": "Возвращает информацию о друзьях пользователя."
         },
         "getInvitationsCount": {
@@ -63,7 +63,7 @@
             "parsedExample": [
                 "mailru.common.friends.getInvitationsCount(function(invitations) {\n  updateStatus(invitations.count); // количество приглашений\n});"
             ],
-			"method": "mailru.common.friends.getInvitationsCount",
+            "method": "mailru.common.friends.getInvitationsCount",
             "description": "Возвращает количество приглашений в друзья для указанного пользователя."
         },
         "request": {
@@ -72,14 +72,14 @@
             "parsedExample": [
                 "mailru.app.friends.request({   text: 'Помоги мне доить корову!',   image_url: 'http://content.foto.mail.ru/corp/martirosov/_cover/i-1187.jpg',   friends: ['123', '345'],   hash: '0123456789abcdef'})"
             ],
-			"method": "mailru.app.friends.request",
-			"params": {
+            "method": "mailru.app.friends.request",
+            "params": {
 				"text": "Помоги собрать арбузы!",
 				"image_url": "http://content.foto.mail.ru/corp/martirosov/_cover/i-1187.jpg",
 				"friends": ["123", "345"],
 				"hash": "0123456789abcdef"
-			},
-			"event": "app.friendsRequest",
+            },
+            "event": "app.friendsRequest",
             "description": "Показывает пользователю диалог отправки запроса друзьям в приложение."
         }
     },
@@ -90,12 +90,12 @@
             "parsedExample": [
                 "mailru.app.payments.showDialog({  service_id: 1,   service_name: 'тестовый бриллиант',   mailiki_price: 1})"
             ],
-			"method": "mailru.app.payments.showDialog",
-			"params": {
+            "method": "mailru.app.payments.showDialog",
+            "params": {
 				"service_id": "1",
 				"service_name": "тестовый алмаз",
 				"mailiki_price": "1"
-			},
+            },
             "description": "Показывает пользователю диалог оплаты."
         }
     },
@@ -106,7 +106,7 @@
             "parsedExample": [
                 "mailru.app.users.isAppUser(function (res) {\n  updateStatus(res.isAppUser); // установил ли текущий пользователь ваше приложение\n});"
             ],
-			"method": "mailru.app.users.isAppUser",
+            "method": "mailru.app.users.isAppUser",
             "description": "Возвращает информацию о том, установил ли пользователь ваше приложение."
         },
         "requireInstallation": {
@@ -115,10 +115,10 @@
             "parsedExample": [
                 "mailru.app.users.requireInstallation(['notification', 'widget'])"
             ],
-			"method": "mailru.app.users.requireInstallation",
-			"params": {
+            "method": "mailru.app.users.requireInstallation",
+            "params": {
 				"notification": "widget"
-			},
+            },
             "description": "Показывает пользователю диалог установки приложения."
         },
         "getBalance": {
@@ -127,7 +127,7 @@
             "parsedExample": [
                 "mailru.common.users.getBalance(function(data) {\n  updateStatus(data.balance); // выведет баланс текущего (авторизованного) пользователя\n});"
             ],
-			"method": "mailru.common.users.getBalance",
+            "method": "mailru.common.users.getBalance",
             "description": "Получение информации о балансе пользователя в мэйликах"
         },
         "getInfo": {
@@ -136,7 +136,7 @@
             "parsedExample": [
                 "mailru.common.users.getInfo(function(user_list) {\n  updateStatus(user_list[0].first_name); // выведет имя пользователя с uid 123\n}, '123');"
             ],
-			"method": "mailru.common.users.getInfo",
+            "method": "mailru.common.users.getInfo",
             "description": "Возвращает информацию об одном или нескольких пользователях."
         },
         "hasAppPermission": {
@@ -145,7 +145,7 @@
             "parsedExample": [
                 "mailru.common.users.hasAppPermission(function(permissions) {\n  // выведет разрешена ли установка виджета\n  updateStatus(permissions.widget ? 'есть' : 'нет');\n}, 'widget', 123);"
             ],
-			"method": "mailru.common.users.hasAppPermission",
+            "method": "mailru.common.users.hasAppPermission",
             "description": "Возвращает информацию о наличии привилегии у пользователя."
         },
         "requirePermission": {
@@ -154,8 +154,8 @@
             "parsedExample": [
                 "mailru.common.users.requirePermission('widget')"
             ],
-			"method": "mailru.common.users.requirePermission",
-			"params": "widget",
+            "method": "mailru.common.users.requirePermission",
+            "params": "widget",
             "description": "Показывает пользователю диалог запроса привилегии."
         }
     },
@@ -166,7 +166,7 @@
             "parsedExample": [
                 "mailru.app.utils.hash.read()"
             ],
-			"method": "mailru.app.utils.hash.read",
+            "method": "mailru.app.utils.hash.read",
             "description": "Получает значение хэша из URL приложения."
         },
         "hash.write": {
@@ -176,8 +176,8 @@
                 "mailru.app.utils.hash.write('user_id=007')",
                 "mailru.app.utils.hash.write({user_id : 007})"
             ],
-			"method": "mailru.app.utils.hash.write",
-			"params": "user_id=007",
+            "method": "mailru.app.utils.hash.write",
+            "params": "user_id=007",
             "description": "Записывает в URL приложения произвольный хэш."
         },
         "scrollTo": {
@@ -187,8 +187,8 @@
                 "mailru.app.utils.scrollTo(100)",
                 "mailru.apputils.scrollTo()"
             ],
-			"method": "mailru.app.utils.scrollTo",
-			"params": "100",
+            "method": "mailru.app.utils.scrollTo",
+            "params": "100",
             "description": "Устанавливает либо возвращает высоту скролла окна с приложением."
         },
         "setHeight": {
@@ -197,8 +197,8 @@
             "parsedExample": [
                 "mailru.app.utils.setHeight(5000); //установит высоту iframe'a равную 5000 пикселей"
             ],
-			"method": "mailru.app.utils.setHeight",
-			"params": "3000",
+            "method": "mailru.app.utils.setHeight",
+            "params": "3000",
             "description": "Устанавливает высоту iframe'a, в котором находится приложение."
         },
         "setTitle": {
@@ -207,8 +207,8 @@
             "parsedExample": [
                 "mailru.app.utils.setTitle('Новое сообщение!');"
             ],
-			"method": "mailru.app.utils.setTitle",
-			"params": "Новое сообщение!",
+            "method": "mailru.app.utils.setTitle",
+            "params": "Новое сообщение!",
             "description": "Устанавливает заголовок окна браузера."
         }
     },
@@ -219,11 +219,11 @@
             "parsedExample": [
                 "mailru.app.widget.set({html: \"html-код виджета\"})"
             ],
-			"method": "mailru.app.widget.set",
-			"params": {
+            "method": "mailru.app.widget.set",
+            "params": {
 				"html": "<h1>HTML-код виджета</h1>"
-			},
-			"event": "app.widget.set",
+            },
+            "event": "app.widget.set",
             "description": "Публикует виджет приложения на профиле пользователя в «Моем мире»."
         }
     },
@@ -234,7 +234,7 @@
             "parsedExample": [
                 "mailru.common.audio.get(function(list) {\n  updateStatus(list[0].title); // название первой композиции из файлов пользователя\n});"
             ],
-			"method": "mailru.common.audio.get",
+            "method": "mailru.common.audio.get",
             "description": "Возвращает информацию о музыке пользователя."
         },
         "link": {
@@ -243,9 +243,8 @@
             "parsedExample": [
                 "mailru.common.audio.link(function(status) {\n  updateStatus(status.linkAudio); // статус добавления аудиозаписи в плейлист\n});"
             ],
-			"method": "mailru.common.audio.link",
-			"params": {},
-			"event": "",
+            "method": "mailru.common.audio.link",
+            "params": {},
             "description": "Добавляет аудиозапись в плейлист пользователя."
         },
         "search": {
@@ -254,11 +253,11 @@
             "parsedExample": [
                 "mailru.common.audio.search(function(found) {\n  updateStatus(found.total); // всего результатов найденных по запросу\n}, 'влад сташевский');"
             ],
-			"method": "mailru.common.audio.search",
-			"params": {
+            "method": "mailru.common.audio.search",
+            "params": {
 				"query": "Света"
-			},
-			"event": "",
+            },
+            "event": "",
             "description": "Выполняет поиск по музыке в Моем Мире."
         }
     },
@@ -269,12 +268,12 @@
             "parsedExample": [
                 "mailru.common.guestbook.post({'title':'title', 'text': 'description'})"
             ],
-			"method": "mailru.common.guestbook.post",
-			"params": {
+            "method": "mailru.common.guestbook.post",
+            "params": {
 				"title": "This is Title!", 
 				"text": "Description here now!"
-			},
-			"event": "common.guestbookPublish",
+            },
+            "event": "common.guestbookPublish",
             "description": "Показывает пользователю диалог публикации записи в Гостевую книгу."
         }
     },
@@ -285,11 +284,11 @@
             "parsedExample": [
                 "mailru.common.messages.send({uid: '1234567'})"
             ],
-			"method": "mailru.common.messages.send",
-			"params": {
+            "method": "mailru.common.messages.send",
+            "params": {
 				"uid": "446142299"
-			},
-			"event": "common.message.send",
+            },
+            "event": "common.message.send",
             "description": "Показывает пользователю диалог отправки личного сообщения."
         }
     },
@@ -300,46 +299,46 @@
             "parsedExample": [
                 "mailru.common.photos.createAlbum({'name': 'test'})"
             ],
-			"method": "mailru.common.photos.createAlbum",
-			"params": {
+            "method": "mailru.common.photos.createAlbum",
+            "params": {
 				"name": "test"
-			},
-			"event": "common.createAlbum",
+            },
+            "event": "common.createAlbum",
             "description": "Показывает пользователю диалог создания альбома."
         },
         "get": {
             "url": "http://api.mail.ru/docs/reference/js/photos-get/",
             "example": "mailru.common.photos.get(function(photos_list) {\n  // выведет название первой фотографии из альбома с aid 123\n  alert(photos_list[0].title); \n}, 123);",
-			"method": "mailru.common.photos.get",
-			"params": "_myphoto",
+            "method": "mailru.common.photos.get",
+            "params": "_myphoto",
             "description": "Возвращает информацию о фотографиях пользователя."
         },
         "getAlbums": {
             "url": "http://api.mail.ru/docs/reference/js/photos-getalbums/",
             "example": "mailru.common.photos.getAlbums(function(albums_list) {\n  // выведет название первого альбома текущего пользователя\n  alert(albums_list[0].title); \n});",
-			"method": "mailru.common.photos.getAlbums",
-			"params": {},
+            "method": "mailru.common.photos.getAlbums",
+            "params": {},
             "description": "Возвращает информацию об альбомах текущего пользователя."
         },
         "upload": {
             "url": "http://api.mail.ru/docs/reference/js/photos-upload/",
             "example": "mailru.events.listen(mailru.common.events.upload, function(result){\n  alert(result.status);\n})\n \nmailru.common.photos.upload({ \n  url: 'http://www.sports.ru/images/object_19.1218129668.jpg', \n  aid: '_myphoto', \n  set_as_cover: true \n});",
-			"method": "mailru.common.photos.upload",
-			"params": {
+            "method": "mailru.common.photos.upload",
+            "params": {
 				"url": "http://cs421726.vk.me/v421726265/5d51/vnxAbHosi0I.jpg",
 				"aid": "_myphoto"
-			},
-			"event":"common.upload",
+            },
+            "event":"common.upload",
             "description": "Показывает пользователю диалог загрузки фотографии."
         },
         "uploadAvatar": {
             "url": "http://api.mail.ru/docs/reference/js/photos-uploadavatar/",
             "example": "mailru.events.listen(mailru.common.events.uploadAvatar, function(result){\n  alert(result.status);\n})\n \n// Загрузка по url и установка\nmailru.common.photos.uploadAvatar({ \n  url: 'http://www.sports.ru/images/object_19.1218129668.jpg'\n});\n \n// Установка по pid\nmailru.common.photos.uploadAvatar({ \n  pid: 2366\n});",
-			"method": "mailru.common.photos.uploadAvatar",
-			"params": {
+            "method": "mailru.common.photos.uploadAvatar",
+            "params": {
 				"url": "http://cs421726.vk.me/v421726265/5d51/vnxAbHosi0I.jpg"
-			},
-			"event":"common.uploadAvatar",
+            },
+            "event":"common.uploadAvatar",
             "description": ""
         }
     },
@@ -350,13 +349,13 @@
             "parsedExample": [
                 "mailru.common.stream.post({'title':'title', 'text': 'description'})"
             ],
-			"method": "mailru.common.stream.post",
-			"params": {
+            "method": "mailru.common.stream.post",
+            "params": {
 				"title": "This is Title!", 
 				"text": "Description Text here"
-			},
-			"callback": "mailruCommonStreamPostCallback",
-			"event": "common.streamPublish",
+            },
+            "callback": "mailruCommonStreamPostCallback",
+            "event": "common.streamPublish",
             "description": "Показывает пользователю диалог добавления записи в «Что нового»."
         }
     }
